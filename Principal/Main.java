@@ -1,10 +1,7 @@
 package Principal;
 
-import Controlador.Controlador;
-import Vista.Menu;
-import Vista.VistaUsuarios;
-import Vista.VistaDentistas;
-import Vista.VistaServicios;
+import Controlador.ControladorPrincipal;
+import Vista.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,9 +10,10 @@ public class Main {
         VistaUsuarios vistaUsuarios = new VistaUsuarios();
         VistaDentistas vistaDentistas = new VistaDentistas();
         VistaServicios vistaServicios = new VistaServicios();
+        VistaTurnos vistaTurnos = new VistaTurnos();
 
         // Creamos el controlador pasándole las vistas
-        Controlador controlador = new Controlador(menu, vistaUsuarios, vistaDentistas, vistaServicios);
+        ControladorPrincipal controlador = new ControladorPrincipal(menu, vistaUsuarios, vistaDentistas, vistaServicios, vistaTurnos);
 
         // Hacemos visible el menú principal
         menu.setVisible(true);
